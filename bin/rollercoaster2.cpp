@@ -1,42 +1,28 @@
-/**
- * @file rollercoaster2.cpp
- *
- * @version 01.01 20201227
- *
- * @brief OIS 2020-12-15
- *
- * @ingroup rollercoaster2
- * (Note: this needs exactly one @defgroup somewhere)
- *
- * @author Castellani Davide
- *
- * Contact: contacts@castellanidavide.it
- *
+/*
+ * NOTE: it is recommended to use this even if you don't
+ * understand the following code.
  */
 
-// Includes
-#include <bits/stdc++.h>
+#include <fstream>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
-// Variabiles
+// input data
 int N;
+vector<int> H;
 
-// Main code
-int main()
-{
-  // Cncomment the following lines if you want to read/write from files
-  // freopen("input.txt", "r", stdin);
-  // freopen("output.txt", "w", stdout);
+int main() {
+//  uncomment the following lines if you want to read/write from files
+//  ifstream cin("input.txt");
+//  ofstream cout("output.txt");
 
-  // Input
-  cin >> N;
+    cin >> N;
+    H.resize(N);
+    for (int i=0; i<N; i++)
+        cin >> H[i];
 
-  // Code
-  // ...
-
-  // Output
-  cout << N << endl;
-
-  // End
-  return 0;
+    cout << (int) (N / 2) + 1 << endl; // print the result
+    return 0;
 }
